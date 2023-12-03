@@ -43,20 +43,25 @@
         <strong>▲* ⓜⓔⓡⓡⓨＸ-ⓜⓐⓢ *▲</strong>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    <div style="font-size:12px;">   *  글을 작성한 본인이 아니면 삭제 버튼을 눌러도 응답하지 않습니다!</div>
-    <% for(let i = 0; i < posts.length; i++){ %>
-    <li class="card" style="max-width: 30rem;">
-        <div class="card-header"  style="background-color:rgb(126, 222, 134) ">
-            <h5 class="card-title"><p class="mb-2" style="color:white"><%= posts[i].이름 %></p></h5>
+    <div style="font-size:12px;">   <t>*</t> 글을 작성한 본인이 아니면 삭제 버튼을 눌러도 응답하지 않습니다!</div>
+
+        <% for(let i = 0; i < posts.length; i++){ %>   
+            <div class="grid"  style="float:left; margin-left:30px; margin-right:30px;  margin-top:20px;">
+            <li class="card" style="width:310px;">
+                <div class="card-header"  style="background-color:rgb(126, 222, 134) ">
+                    <h5 class="card-title"><p class="mb-2" style="color:white"><%= posts[i].이름 %></p></h5>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-body-secondary"><strong>🖊✉</strong></h6>
+                    <p class="card-text"><p class="mb-2"><%= posts[i].내용 %></p></p>
+                    <button class="btn btn-danger delete" style="background-color:rgb(246, 235, 19)" data-id="<%= posts[i]._id %>">삭제</button>
+            </li>
         </div>
-        <div class="card-body">
-            <h6 class="card-subtitle mb-2 text-body-secondary"><strong>🖊✉</strong></h6>
-            <p class="card-text"><p class="mb-2"><%= posts[i].내용 %></p></p>
-            <button class="btn btn-danger delete" style="background-color:rgb(246, 235, 19)" data-id="<%= posts[i]._id %>">삭제</button>
         </div>
-    </li>
-    <% } %>
-    
+        <% } %>
+
+        
+        
 
 
     
