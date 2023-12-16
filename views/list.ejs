@@ -43,7 +43,8 @@
         <strong>▲* ⓜⓔⓡⓡⓨＸ-ⓜⓐⓢ *▲</strong>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    <div style="font-size:12px;">   <t>*</t> 글을 작성한 본인이 아니면 삭제 버튼을 눌러도 응답하지 않습니다!</div>
+    <div style="font-size:12px;">  글을 작성한 본인이 아니면 삭제 버튼을 눌러도 응답하지 않습니다!</div>
+    
 
         <% for(let i = 0; i < posts.length; i++){ %>   
             <div class="grid"  style="float:left; margin-left:30px; margin-right:30px;  margin-top:20px;">
@@ -57,7 +58,7 @@
                     <button class="btn btn-danger delete" style="background-color:rgb(246, 235, 19)" data-id="<%= posts[i]._id %>">삭제</button>
             </li>
         </div>
-        </div>
+    </div>
         <% } %>
 
         
